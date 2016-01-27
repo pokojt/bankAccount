@@ -1,8 +1,9 @@
 describe ('BankAccount', function() {
-  it("allows users to create a bank account with an initial deposit", function() {
-    var testAccount = new BankAccount("Steve", 500);
+  it("allows users to create a bank account with an initial deposit and returns the balance", function() {
+    var testAccount = new BankAccount("Steve", 500, 500);
     expect(testAccount.userName).to.equal("Steve");
     expect(testAccount.initialDeposit).to.equal(500);
+    expect(testAccount.balance).to.equal(500);
   });
 
   it("adds the withdrawal and deposit methods to any account", function() {
